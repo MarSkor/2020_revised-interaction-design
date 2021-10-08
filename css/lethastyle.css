@@ -1,0 +1,782 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: rgb(235, 235, 235);
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+
+/* content container
+-------------------------------*/
+.main-content,
+.extra-content {
+  position: relative;
+  padding-top: 20px;
+  max-width: 850px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+
+.centered-box {
+  width: 500px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 250px;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  padding: 40px 40px;
+}
+
+/* card - changed
+-------------------------------*/
+.shoe-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0 -5px;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.226);
+  background-color: white;
+  margin: 0 auto;
+  float: left;
+  width: 400px;
+  padding-bottom: 20px;
+  text-align: center;
+  margin: 20px;
+}
+.smallImage {
+  max-width: 400px;
+  height: auto;
+}
+
+.shopbtn {
+  margin-top: 10px;
+}
+h3.name {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* testimonials card - changed
+-------------------------------*/
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 0 8px;
+}
+.card-ts {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.11);
+  padding: 10px;
+}
+
+/*API loader, Noroff Code
+  ------------------------------------*/
+.secondLoader {
+  margin: 0 auto;
+  border: 16px solid rgb(243, 243, 243);
+  border-top: 16px solid rgb(12, 10, 11);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter 
+for blurry overlay on background image
+----------------------------------*/
+.blur-container {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.blur-box {
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 100%;
+  max-height: 100%;
+  backdrop-filter: blur(8px);
+  padding: 40px 40px;
+}
+
+.front-page-img {
+  height: 100%;
+  width: 500px;
+}
+
+/* @font-face
+-------------------------------*/
+
+@font-face {
+  font-family: "nunito";
+  src: url(../fonts/Nunito-Bold.ttf);
+}
+@font-face {
+  font-family: "roboto";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: "roboto-medium";
+  src: url(../fonts/Roboto-Medium.ttf);
+}
+
+/*typography
+-------------------------------*/
+div .logo {
+  font-family: "nunito", Arial, Helvetica, sans-serif;
+}
+
+.links a,
+.ul-links a {
+  font-family: "roboto-medium", Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+.form-input[type="text"],
+#full-input-width[type="text"],
+#full-input-width[type="password"],
+textarea {
+  font-size: 16px;
+}
+textarea,
+button {
+  font-family: "roboto", Arial, Helvetica, sans-serif;
+}
+.login-text {
+  text-align: center;
+}
+p {
+  padding-top: 8px;
+  font-size: 16px;
+}
+h1,
+h2 {
+  padding-top: 3px;
+  padding-bottom: 4px;
+}
+h1 {
+  font-size: 22px;
+}
+h2 {
+  font-size: 20px;
+}
+
+/*page images
+-------------------------------*/
+.homepage-img {
+  background-image: url(../img/shoes.jpg);
+}
+
+.leather-care-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/brown-shoes-1150071_1920.jpg);
+}
+.about-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/dalton-touchberry-5qMvvX5fOG4-unsplash.jpg);
+}
+.contact-us-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/jonathan-brinkhorst-M1R0aHIBAVY-unsplash.jpg);
+}
+.faq-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/black-classic-daylight-elegant-267280.jpg);
+}
+.help-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/footwear-1838767_1920.jpg);
+}
+.gift-cards-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/classic-clothes-commerce-fashion-298863.jpg);
+}
+.account-img {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4)),
+    url(../img/shoesblur.jpg);
+}
+
+/*background image style
+------------------------*/
+
+.img-fix {
+  height: 100%;
+}
+.bg-img {
+  height: auto;
+}
+.bg-img,
+.img-fix {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  overflow: hidden;
+}
+
+/*various images 
+------------------------*/
+.img-container {
+  text-align: center;
+}
+
+.img-container {
+  width: 100%;
+  position: relative;
+}
+
+#img-style {
+  position: absolute;
+  float: right;
+  width: 50%;
+}
+.extra-text {
+  float: left;
+}
+
+.gift-card {
+  max-width: 400px;
+}
+
+img {
+  width: 100%;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.336);
+}
+
+/*contact form
+-------------------------------*/
+
+.form-box {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 50px;
+  background-color: rgb(241, 241, 241);
+}
+form {
+  width: 500px;
+  border: none;
+  border-radius: 4px;
+}
+#contactForm {
+  padding-bottom: 20px;
+}
+
+.form-error {
+  font-size: 13px;
+  margin-top: -10px;
+  display: none;
+}
+
+#sent-message {
+  display: none;
+  color: rgb(36, 145, 9);
+  text-decoration: underline;
+}
+
+form > div {
+  margin-bottom: 20px;
+}
+
+.contact {
+  display: block;
+  margin-bottom: 2px;
+}
+
+textarea {
+  height: 100px;
+  border: none;
+  background-color: rgb(209, 209, 209);
+  margin: 5px 0 22px 0;
+  padding: 16px;
+}
+
+#nameError,
+#invalidEmailError,
+#detailsError {
+  color: rgb(255, 0, 0);
+}
+
+/*login-signup-form
+-------------------------------*/
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  max-width: 350px;
+  padding: 16px;
+  background-color: rgb(255, 255, 255);
+}
+
+textarea {
+  width: 100%;
+}
+.form-input[type="text"],
+#full-input-width[type="text"],
+#full-input-width[type="password"] {
+  width: 100%;
+  border: none;
+  background-color: rgb(209, 209, 209);
+  margin: 5px 0 22px 0;
+  padding: 16px;
+}
+
+.form-input[type="text"]:focus,
+#full-input-width[type="text"]:focus,
+#full-input-width[type="password"]:focus,
+textarea:focus {
+  color: rgb(0, 0, 0);
+  outline: none;
+  background-color: rgb(253, 222, 222);
+}
+
+.login,
+.btn-form {
+  background-color: rgb(3, 100, 3);
+}
+.signup,
+.shop-btn {
+  background-color: rgb(29, 29, 29);
+}
+
+.btn {
+  margin-bottom: 10px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+}
+.login-btn:hover {
+  background-color: rgb(0, 119, 0);
+}
+.signup-btn:hover,
+.shop-btn:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/*navigation bar
+help from https://youtu.be/PwWHL3RyQgk?t=22 
+navbar 1, to position logo and links on different sides
+-------------------------------*/
+li,
+a {
+  text-decoration: none;
+  color: rgb(167, 167, 167);
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+
+.full-navbar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+header {
+  display: flex;
+  overflow: hidden;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 18%;
+  background-color: rgb(19, 18, 18);
+}
+
+.logo {
+  cursor: pointer;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.links {
+  list-style: none;
+}
+
+.links li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.links li a {
+  transition: all 0.2s ease 0s;
+}
+
+.links li a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.active {
+  color: rgb(226, 214, 41);
+}
+
+/* icons
+-------------------*/
+.fa-shopping-bag,
+.fa-user {
+  cursor: pointer;
+  font-size: 27px;
+  transition: all 0.2s ease 0s;
+  color: rgb(167, 167, 167);
+  margin-left: 10px;
+}
+.fa-shopping-bag:hover {
+  color: rgb(255, 255, 255);
+}
+.fa-user:hover {
+  color: rgb(255, 255, 255);
+}
+.logo {
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+}
+
+/* search bar
+-------------------*/
+.right {
+  display: flex;
+  align-items: center;
+}
+.search-bar input[type="text"] {
+  outline: none;
+  border: none;
+}
+
+.search-bar input[type="text"]:focus {
+  width: 260px;
+}
+.search-bar {
+  margin-right: 10px;
+
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.search-box[type="text"] {
+  transition: 0.2s ease;
+  height: 30px;
+  padding: 4px;
+  width: 150px;
+  font-size: 16px;
+}
+
+.search-box {
+  border-radius: 4px;
+  border: 0;
+  flex: 1;
+  padding: 8px 8px 8px 0;
+}
+
+.search-icon {
+  padding: 8px;
+}
+
+.fa-search {
+  color: rgb(167, 167, 167);
+}
+
+/*footer
+-------------------------------*/
+footer {
+  text-align: center;
+  padding-top: 2px;
+  bottom: 0;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  padding-bottom: 60px;
+}
+
+footer li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+footer li a {
+  color: white;
+  transition: all 0.2s ease 0s;
+}
+
+/*links
+-----------------*/
+.ul-links {
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 15px 10%;
+}
+.account-links {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30%;
+  margin-bottom: 10px;
+  background-color: rgba(180, 180, 180, 0.651);
+}
+.account-links a {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 18px;
+  letter-spacing: 4px;
+}
+.account-links a:hover {
+  color: rgb(0, 0, 0);
+}
+
+/*shoe-details-cards
+-------------------------------*/
+h1.bg-title {
+  font-size: 30px;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-family: "nunito";
+  text-align: center;
+  letter-spacing: 8px;
+}
+
+/* delete page/account modal 
+help from https://www.w3schools.com/howto/howto_css_delete_modal.asp  
+-------------------------------*/
+.btn-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-btn {
+  background-color: rgb(197, 10, 10);
+  color: rgb(255, 255, 255);
+  margin: 8px 0;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  opacity: 0.9;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+.size-chart-btn {
+  padding: 8px 13px;
+  text-transform: uppercase;
+}
+
+.account-btn:hover {
+  opacity: 1;
+}
+
+.dltbtn {
+  background-color: rgb(199, 0, 0);
+}
+
+.cancelbtn {
+  background-color: rgb(10, 60, 197);
+}
+
+.cancelbtn,
+.dltbtn {
+  float: left;
+  width: 50%;
+}
+
+.modal-container {
+  padding: 16px;
+  text-align: center;
+}
+
+/*start of full code used from;
+ https://www.w3schools.com/howto/howto_css_delete_modal.asp  
+------------------------*/
+.modal {
+  overflow: auto;
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 50px;
+}
+
+hr {
+  border: 1px solid rgb(241, 241, 241);
+  margin-bottom: 25px;
+}
+
+.modal-box {
+  background-color: rgb(254, 254, 254);
+  margin: 5% auto 15% auto;
+  width: 30%;
+}
+/*end of full code used 
+(expect for styling)
+------------------------*/
+
+/*shopping cart
+-------------------------------*/
+.shopping-cart {
+  background: rgb(255, 255, 255);
+  width: 780px;
+  height: 650px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 2px;
+  flex-direction: column;
+  display: flex;
+  margin: 80px auto;
+}
+
+.cart-content {
+  margin: 20px;
+  font-style: italic;
+}
+
+.title {
+  font-size: 20px;
+  color: rgb(29, 29, 29);
+  border-bottom: 1px solid rgb(207, 207, 207);
+  padding: 20px 30px;
+}
+
+.btn-cart {
+  width: 20%;
+  display: inline-block;
+  overflow: auto;
+  white-space: nowrap;
+  margin: 0px auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.right button,
+.left button {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* shoe details  page
+-------------------------------*/
+.box-container {
+  float: left;
+  width: 50%;
+  padding-right: 10px;
+  padding-top: 80px;
+}
+
+/* default style 
+of links and buttons
+-------------------------------*/
+.default-btn,
+.shopbtn {
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  color: rgb(255, 255, 255);
+  padding: 8px 13px;
+  background-color: rgba(53, 53, 53, 0.836);
+  text-transform: uppercase;
+}
+.default-btn:hover,
+.shopbtn:hover {
+  background-color: rgb(41, 41, 41);
+}
+
+.default-link {
+  color: rgb(44, 41, 204);
+  font-weight: bold;
+}
+.default-link:hover {
+  color: rgb(0, 0, 0);
+}
+.fp-btn {
+  border: none;
+  cursor: pointer;
+  width: 30%;
+  color: rgb(255, 255, 255);
+  padding: 10px 13px;
+  background-color: rgb(41, 41, 41);
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+/* testimonial
+-------------------------------*/
+.bg-color {
+  background-color: rgb(241, 241, 241);
+}
+.testimonials {
+  position: relative;
+  padding-top: 20px;
+  max-width: auto;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+.tal-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.star-container {
+  padding: 10px;
+  text-align: center;
+}
+.fa-star {
+  color: rgb(230, 216, 21);
+}
+.h2-uppercase {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 28px;
+}

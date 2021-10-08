@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Lorem Impsum Shoes are great for special occasions."
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shoe Details</title>
+    <link rel="stylesheet" href="css/lethastyle.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico" />
+  </head>
+  <body>
+    <header class="full-navbar">
+      <div>
+        <a href="index.html" class="logo">Letha</a>
+      </div>
+
+      <nav class="top-nav">
+        <ul class="links">
+          <li><a href="shoes.html">Shoes</a></li>
+          <li><a href="leather-care.html">Leather Care</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gift-cards.html">Gift Cards</a></li>
+        </ul>
+      </nav>
+      <div class="right">
+        <div class="search-bar">
+          <i class="fa fa-search search-icon"></i>
+          <input type="text" class="search-box" placeholder="Search" />
+        </div>
+        <span class="account-icon">
+          <a class="account" href="account.html"><i class="fas fa-user"></i></a>
+          <a href="cart.html"><i class="fas fa-shopping-bag"></i></a>
+        </span>
+      </div>
+    </header>
+
+    <section class="main-content img-fix">
+      <a class="default-link" href="shoes.html">Back to shoes</a>
+      <main class="box-row clearfix">
+        <div class="box-container">
+          <img
+            src="https://images.unsplash.com/photo-1548430395-ec39eaf2aa1a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1374&q=80"
+            alt="Shoes"
+          />
+        </div>
+
+        <div class="box-container">
+          <h1>Shoe Name</h1>
+
+          <h4>Details</h4>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
+            porttitor, nulla ut pharetra eleifend, massa leo eleifend nibh, ac
+            pellentesque lorem enim non magna. Maecenas mattis diam ac quam
+            porta, quis posuere magna tincidunt. Duis semper leo eu quam tempor
+            laoreet.
+          </p>
+          <button class="default-btn">Add to Cart</button>
+
+          <!--START OF MODAL TRIGGER , from: https://www.w3schools.com/howto/howto_css_delete_modal.asp-->
+          <button
+            class="account-btn size-chart-btn"
+            onclick="document.querySelector('#dlt-account').style.display='block'"
+          >
+            Size Chart
+          </button>
+          <!--END OF MODAL TRIGGER-->
+          <div></div>
+        </div>
+      </main>
+    </section>
+
+    <footer>
+      <ul class="ul-links">
+        <li><a href="help.html">Help</a></li>
+        <li><a href="faq.html">FaQ</a></li>
+        <li><a href="contact-us.html">Contact us</a></li>
+      </ul>
+    </footer>
+    <!--START OF MODAL , from: https://www.w3schools.com/howto/howto_css_delete_modal.asp-->
+    <div id="dlt-account" class="modal">
+      <form class="modal-box">
+        <div class="modal-container" action="/action_page.php">
+          <h1>Shoe Size Chart</h1>
+          <img
+            src="img/kisspng-shoe-size-last-clothing-sizes-foot-size-chart-5aecd0556d8939.5059216515254692694487.png"
+            alt="shoe size chart, european, us and uk sizes"
+          />
+
+          <div class="clearfix">
+            <div class="btn-center">
+              <button
+                type="button"
+                class="account-btn cancelbtn"
+                onclick="document.querySelector('#dlt-account').style.display='none'"
+                ;
+              >
+                Close Size Chart
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <!--END OF MODAL-->
+    <script src="js/modal.js"></script>
+    <!-- <script src="js/shoeDetails.js"></script> -->
+  </body>
+</html>

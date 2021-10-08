@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Your Shopping Cart" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Shopping Cart</title>
+    <link rel="stylesheet" href="css/lethastyle.css" />
+    <link rel="stylesheet" href="fontawesome/css/all.min.css" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.ico" />
+  </head>
+  <body>
+    <header class="full-navbar">
+      <div>
+        <a href="index.html" class="logo">Letha</a>
+      </div>
+
+      <nav class="top-nav">
+        <ul class="links">
+          <li><a href="shoes.html">Shoes</a></li>
+          <li><a href="leather-care.html">Leather Care</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="gift-cards.html">Gift Cards</a></li>
+        </ul>
+      </nav>
+
+      <div class="right">
+        <div class="search-bar">
+          <i class="fa fa-search search-icon"></i>
+          <input type="text" class="search-box" placeholder="Search" />
+        </div>
+        <span class="account-icon">
+          <a class="account" href="account.html"><i class="fas fa-user"></i></a>
+          <i class="fas fa-shopping-bag"></i>
+        </span>
+      </div>
+    </header>
+
+    <section class="main-content img-fix">
+      <div class="shopping-cart">
+        <main class="cart">
+          <div class="title">My shopping Cart</div>
+          <section class="cart-content">
+            <p>The following items have been added to your cart:</p>
+          </section>
+        </main>
+      </div>
+      <div class="btn-cart right">
+        <button class="btn shop-btn">Payment</button>
+      </div>
+      <div class="btn-cart left">
+        <button
+          class="btn shop-btn"
+          onclick="window.location.href='shoes.html';"
+        >
+          Continue Shopping
+        </button>
+      </div>
+    </section>
+
+    <footer>
+      <ul class="ul-links">
+        <li><a href="help.html">Help</a></li>
+        <li><a href="faq.html">FaQ</a></li>
+        <li><a href="contact-us.html">Contact us</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
